@@ -54,7 +54,7 @@ DEFAULTS = {
     'mn': 0.1414, 'alpha_n': 25.0, 'beta': 45.0, 'hand': 0, 'by': 0,
     'z1': 25, 'z2': 25, 'backlash': 0.02, 'delta1': 45.0, 'sigma': 90.0,
     'face': 0.0, 'gap': 0.0, 'position': 180.0, 'flip': False,
-    'replace': True, 'check': True, 'preview': True,
+    'replace': True, 'check': True, 'preview': False,
 }
 
 HANDS = [('Right', M.RIGHT), ('Left', M.LEFT)]
@@ -703,7 +703,8 @@ def on_created(app, cmd):
                              bool(s['replace']))
     inputs.addBoolValueInput('check', 'Measure interference', True, '',
                              bool(s['check']))
-    inputs.addBoolValueInput('preview', 'Preview', True, '', bool(s['preview']))
+    # off at every opening, whatever was used last: a preview recomputes on every change
+    inputs.addBoolValueInput('preview', 'Preview', True, '', False)
     info = inputs.addTextBoxCommandInput('info', '', '', 14, True)
     info.isFullWidth = True
     refresh(inputs)
