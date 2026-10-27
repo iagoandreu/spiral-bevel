@@ -1,0 +1,13 @@
+{
+    "autodeskProduct": "Fusion",
+    "type": "addin",
+    "id": "c3596d39-f43a-4f71-a98d-431b65d8cf59",
+    "author": "Iago Andreu",
+    "description": {
+        "": "Spiral bevel pinion and gear: any tooth counts and shaft angle, placed on a face or plane or continuing a helical gear, with a live swept-clearance check."
+    },
+    "version": "0.3.0",
+    "runOnStartup": true,
+    "supportedOS": "windows|mac",
+    "editEnabled": true
+}
